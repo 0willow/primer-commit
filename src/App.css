@@ -67,6 +67,45 @@ body {
   font-size: 0.85rem;
 }
 
+/* Barra de búsqueda y acciones masivas */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.toolbar__search {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #d3d8e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.toolbar__search:focus {
+  border-color: #4a7dff;
+  box-shadow: 0 0 0 3px rgba(74, 125, 255, 0.15);
+}
+
+.toolbar__delete-all {
+  padding: 8px 14px;
+  border: 1px solid #e5473c;
+  border-radius: 8px;
+  background: #fff;
+  color: #e5473c;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.toolbar__delete-all:hover {
+  background: #e5473c;
+  color: #fff;
+}
+
 /* Lista */
 .item-list {
   display: flex;
@@ -99,10 +138,23 @@ body {
   background: #fafbfc;
 }
 
+.item__checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4a7dff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
 .item__text {
   flex: 1;
   word-break: break-word;
   color: #2f3a4c;
+}
+
+.item--completed .item__text {
+  text-decoration: line-through;
+  color: #9aa2b1;
 }
 
 .item__actions {

@@ -1,12 +1,12 @@
 import React from "react";
 import Item from "./Item";
 
-function List({ items, onEdit, onDelete }) {
+function List({ items, totalCount, onEdit, onDelete, onToggleComplete }) {
   return (
     <div>
-      <p className="item-list__counter">Total: {items.length}</p>
+      <p className="item-list__counter">Total: {totalCount}</p>
       {items.length === 0 ? (
-        <p className="item-list__empty">No hay elementos todavía.</p>
+        <p className="item-list__empty">No hay elementos que mostrar.</p>
       ) : (
         <div className="item-list">
           {items.map((item) => (
@@ -15,6 +15,7 @@ function List({ items, onEdit, onDelete }) {
               item={item}
               onEdit={onEdit}
               onDelete={onDelete}
+              onToggleComplete={onToggleComplete}
             />
           ))}
         </div>
