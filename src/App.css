@@ -61,11 +61,24 @@ body {
   background: #3865e0;
 }
 
+.item-form__error {
+  margin: -10px 0 16px;
+  color: #c62828;
+  font-size: 0.85rem;
+}
+
 /* Lista */
 .item-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.item-list__counter {
+  margin: 0 0 12px;
+  color: #6b7385;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .item-list__empty {
