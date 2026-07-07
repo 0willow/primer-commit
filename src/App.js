@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import List from "./List";
+import "./App.css";
 
 const STORAGE_KEY = "crud-items";
 
@@ -46,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Mi Lista de Tareas</h1>
+      <h1 className="App-title">Mi Lista de Tareas</h1>
       <Form onSubmit={handleAddOrUpdate} editingItem={editingItem} />
       <List items={items} onEdit={handleEdit} onDelete={handleDelete} />
     </div>
